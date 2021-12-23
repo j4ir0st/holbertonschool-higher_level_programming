@@ -12,16 +12,16 @@ if __name__ == "__main__":
     b = int(sys.argv[3])
 
     if (op == "+"):
-        print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
+        print("{:d} {} {:d} = {:d}".format(a, op, b, add(a, b)))
         sys.exit(0)
     elif (op == "-"):
-        print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
+        print("{:d} {} {:d} = {:d}".format(a, op, b, sub(a, b)))
         sys.exit(0)
     elif (op == "*"):
-        print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
+        print("{:d} {} {:d} = {:d}".format(a, op, b, mul(a, b)))
         sys.exit(0)
     elif (op == "/"):
-        print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
+        print("{:d} {} {:d} = {:d}".format(a, op, b, div(a, b)))
         sys.exit(0)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
