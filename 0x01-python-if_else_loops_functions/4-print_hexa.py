@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for c in range(0,99):
-    print("{:d} = {:s}".format(c, hex(c)))
+    print("{} = {}".format(c, hex(c)))
