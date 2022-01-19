@@ -7,4 +7,5 @@ Atributtes: Empty
 
 
 class Square:
+    """    Empty Class    """
     pass
