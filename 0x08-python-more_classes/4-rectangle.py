@@ -36,6 +36,7 @@ class Rectangle:
                 x += 1
                 y = 0
         return (str1)
+
     def __repr__(self):
         return ("Rectangle({}, {})".format(self.__width, self.__height))
 
