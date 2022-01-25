@@ -7,14 +7,13 @@ Atributtes: width, height
 
 
 class Rectangle:
-
+    """    Rectangle Class with width, height atributtes   """
     number_of_instances = 0
 
-    """    Rectangle Class with width, height atributtes   """
     def __init__(self, width=0, height=0):
-        Rectangle.number_of_instances += 1
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
 
     def area(self):
         return (self.__width * self.__height)
