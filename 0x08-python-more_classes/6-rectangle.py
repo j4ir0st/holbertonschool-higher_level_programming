@@ -7,6 +7,7 @@ Atributtes: width, height
 
 
 class Rectangle:
+
     number_of_instances = 0
 
     """    Rectangle Class with width, height atributtes   """
