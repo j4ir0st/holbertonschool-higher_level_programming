@@ -36,6 +36,7 @@ class Rectangle:
                 x += 1
                 y = 0
         return (str1)
+
     @property
     def width(self):
         return (self.__width)
