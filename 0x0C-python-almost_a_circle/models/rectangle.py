@@ -59,6 +59,9 @@ class Rectangle(Base):
         if (l_ar > 4):
             self.__y = args[4]
 
+    def to_dictionary(self):
+        return (dict([('x', self.x), ('y', self.y), ('id', self.id), ('heigth', self.height), ('width', self.width)]))
+
     @property
     def width(self):
         return (self.__width)
