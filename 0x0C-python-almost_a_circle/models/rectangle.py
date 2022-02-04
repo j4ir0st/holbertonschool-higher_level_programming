@@ -34,8 +34,20 @@ class Rectangle(Base):
             h += 1
             w = 0
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         l_ar = len(args)
+        if not args or l_ar == 0:
+            for key, value in kwargs.items():
+                if key == "width":
+                    self.__width = value
+                if key == "height":
+                    self.__height = value
+                if key == "x":
+                    self.__x = value
+                if key == "y":
+                    self.__y = value
+                if key == "id":
+                    self.id = value
         if (l_ar > 0):
             self.id = args[0]
         if (l_ar > 1):
