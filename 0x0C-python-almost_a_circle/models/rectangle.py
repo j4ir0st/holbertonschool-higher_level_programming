@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """ First Rectangle """
-
-
 from models.base import Base
 
 
@@ -22,9 +20,11 @@ class Rectangle(Base):
         return str1
 
     def area(self):
+        """ Area function """
         return(self.__width * self.__height)
 
     def display(self):
+        """ Display function """
         h = 0
         w = 0
         z = 0
@@ -41,6 +41,7 @@ class Rectangle(Base):
             w = 0
 
     def update(self, *args, **kwargs):
+        """ Update function """
         l_ar = len(args)
         if not args or l_ar == 0:
             for key, value in kwargs.items():
@@ -66,6 +67,7 @@ class Rectangle(Base):
             self.__y = args[4]
 
     def to_dictionary(self):
+        """ To dictionary function """
         d = dict([('x', self.x), ('y', self.y), ('id', self.id)])
         d['heigth'] = self.height
         d['width'] = self.width
