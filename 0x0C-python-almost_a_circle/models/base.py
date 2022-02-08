@@ -34,3 +34,8 @@ class Base:
                         [elem.to_dictionary()for elem in list_objs]
                     )
                 )
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ From JSON string to Object """
+        return (json.loads(json_string))
