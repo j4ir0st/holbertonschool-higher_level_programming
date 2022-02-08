@@ -25,4 +25,4 @@ class Base:
     def save_to_file(cls, list_objs):
         """ Writes the given file """
         with open(cls.__name__ + ".json", 'w', encoding='UTF8') as fo:
-            fo.write(json.dumps([elem.to_dictionary()for elem in list_objs]))
+            fo.write(to_json_string([elem.to_dictionary()for elem in list_objs]))
