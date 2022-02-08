@@ -70,7 +70,7 @@ class Rectangle(Base):
         """ To dictionary function """
         d = dict([('id', self.id)])
         d['width'] = self.width
-        d['heigth'] = self.height
+        d['height'] = self.height
         d['x'] = self.x
         d['y'] = self.y
         return (d)
