@@ -68,9 +68,11 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """ To dictionary function """
-        d = dict([('x', self.x), ('y', self.y), ('id', self.id)])
-        d['heigth'] = self.height
+        d = dict([('id', self.id)])
         d['width'] = self.width
+        d['heigth'] = self.height
+        d['x'] = self.x
+        d['y'] = self.y
         return (d)
 
     @property
