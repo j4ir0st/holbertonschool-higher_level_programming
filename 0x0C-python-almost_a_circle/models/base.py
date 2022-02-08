@@ -26,7 +26,7 @@ class Base:
         """ Writes the given file """
         if (list_objs is None):
             with open(cls.__name__ + ".json", 'w', encoding='UTF8') as fo:
-                fo.write(to_json_string([]))
+                fo.write(to_json_string(None))
         else:
             with open(cls.__name__ + ".json", 'w', encoding='UTF8') as fo:
                 fo.write(
