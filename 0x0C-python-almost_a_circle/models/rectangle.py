@@ -13,7 +13,11 @@ class Rectangle(Base):
         self.y = y
 
     def __str__(self):
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height))
+        str1 = "[Rectangle]"
+        str1 += " (" + self.id + ") "
+        str1 += self.__x + "/" + self.__y + " - "
+        str1 += self.__width + "/" + self.__height
+        return str1
 
     def area(self):
         return(self.__width * self.__height)
@@ -23,8 +27,8 @@ class Rectangle(Base):
         w = 0
         z = 0
         while (z < self.__y):
-                print("")
-                z += 1
+            print("")
+            z += 1
         while h < self.__height:
             print(" " * self.__x, end="")
             while w < self.__width:
@@ -60,7 +64,10 @@ class Rectangle(Base):
             self.__y = args[4]
 
     def to_dictionary(self):
-        return (dict([('x', self.x), ('y', self.y), ('id', self.id), ('heigth', self.height), ('width', self.width)]))
+        d = dict([('x', self.x), ('y', self.y), ('id', self.id)])
+        d['heigth'] = self.height
+        d['width'] = self.width
+        return (d)
 
     @property
     def width(self):
@@ -68,7 +75,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, v_width):
-        if  not (isinstance(v_width, int)):
+        if not (isinstance(v_width, int)):
             raise TypeError('width must be an integer')
         if (v_width <= 0):
             raise ValueError('width must be > 0')
@@ -80,7 +87,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, v_height):
-        if  not (isinstance(v_height, int)):
+        if not (isinstance(v_height, int)):
             raise TypeError('height must be an integer')
         if (v_height <= 0):
             raise ValueError('height must be > 0')
@@ -92,7 +99,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, v_x):
-        if  not (isinstance(v_x, int)):
+        if not (isinstance(v_x, int)):
             raise TypeError('x must be an integer')
         if (v_x < 0):
             raise ValueError('x must be >= 0')
@@ -104,7 +111,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, v_y):
-        if  not (isinstance(v_y, int)):
+        if not (isinstance(v_y, int)):
             raise TypeError('y must be an integer')
         if (v_y < 0):
             raise ValueError('y must be >= 0')
