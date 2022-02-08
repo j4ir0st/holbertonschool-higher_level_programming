@@ -30,5 +30,7 @@ class Base:
         else:
             with open(cls.__name__ + ".json", 'w', encoding='UTF8') as fo:
                 fo.write(
-                    cls.to_json_string([elem.to_dictionary()for elem in list_objs])
+                    cls.to_json_string(
+                        [elem.to_dictionary()for elem in list_objs]
+                    )
                 )
