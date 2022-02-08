@@ -14,9 +14,9 @@ class Rectangle(Base):
 
     def __str__(self):
         str1 = "[Rectangle]"
-        str1 += " (" + self.id + ") "
-        str1 += self.__x + "/" + self.__y + " - "
-        str1 += self.__width + "/" + self.__height
+        str1 += " (" + str(self.id) + ") "
+        str1 += str(self.__x) + "/" + str(self.__y) + " - "
+        str1 += str(self.__width) + "/" + str(self.__height)
         return str1
 
     def area(self):
