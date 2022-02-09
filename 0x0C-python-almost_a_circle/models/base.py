@@ -50,3 +50,16 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return (dummy)
+
+    @classmethod
+    def load_from_file(cls):
+        """ Writes a function on JSON file """
+        try:
+            with open(cls.__name__ + ".json", 'r', encoding='UTF8') as fo:
+                return (
+                    [cls.create(**elem) for elem in cls.from_json_string(
+                        fo.read()
+                    )]
+                )
+        except:
+            return ([])
