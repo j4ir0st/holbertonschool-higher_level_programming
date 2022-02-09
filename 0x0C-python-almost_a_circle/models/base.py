@@ -63,3 +63,30 @@ class Base:
                 )
         except:
             return ([])
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ Writes the given file """
+        if (list_objs is None):
+            with open(cls.__name__ + ".csv", 'w', encoding='UTF8') as fo:
+                fo.write(cls.to_json_string(None))
+        else:
+            with open(cls.__name__ + ".csv", 'w', encoding='UTF8') as fo:
+                fo.write(
+                    cls.to_json_string(
+                        [elem.to_dictionary()for elem in list_objs]
+                    )
+                )
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ Writes a function on JSON file """
+        try:
+            with open(cls.__name__ + ".csv", 'r', encoding='UTF8') as fo:
+                return (
+                    [cls.create(**elem) for elem in cls.from_json_string(
+                        fo.read()
+                    )]
+                )
+        except:
+            return ([])
