@@ -7,10 +7,10 @@ class Rectangle {
     }
   }
 
-  print () {
+  print (c = 'X') {
     let subs = '';
     for (let i = 0; i < this.width; i++) {
-      subs = subs + 'X';
+      subs = subs + c;
     }
     for (let j = 0; j < this.height; j++) {
       console.log(subs);
