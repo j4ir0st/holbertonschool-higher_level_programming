@@ -21,10 +21,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     try:
-        ls = session.query(State).order_by(State.id).all()
+        ls = session.query(State).filter(State.name == '%a%').all()
         for states in ls:
-            if 'a' in states.name:
-                session.delete(states)
+            session.delete(states)
         session.commit()
     except Exception:
         session.rollback()
