@@ -24,7 +24,9 @@ if __name__ == "__main__":
         ls = session.query(State).order_by(State.id).all()
         for states in ls:
             continue
-        new_state = State(id = states.id + 1, name = "Louisiana")
+        if !ls:
+            states.id = 0
+        new_state = State(id=states.id + 1, name="Louisiana")
         session.add(new_state)
         session.commit()
         print("{}".format(new_state.id))
