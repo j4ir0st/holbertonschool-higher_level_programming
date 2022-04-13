@@ -9,7 +9,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 class City(Base):
     """
-    Class: definition inherits from Base
+    Class: definition city class inherits from Base
     """
     __tablename__ = 'cities'
     id = Column(Integer, primary_key=True, nullable=False)
