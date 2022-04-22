@@ -10,7 +10,7 @@ def find_peak(list_of_integers):
     size = len(list_of_integers)
     half_size = int(size / 2)
 
-    if (half_size + 1 >= size and half_size - 1 < 0):
+    if (half_size + 1 >= size) and (half_size - 1 < 0):
         return (list_of_integers[half_size])
     elif (half_size - 1 < 0):
         if (list_of_integers[half_size] > list_of_integers[half_size + 1]):
