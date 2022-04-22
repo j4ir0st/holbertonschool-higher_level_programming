@@ -8,7 +8,7 @@ def find_peak(list_of_integers):
         return (None)
 
     size = len(list_of_integers)
-    half_size = int(length / 2)
+    half_size = int(size / 2)
 
     if (half_size + 1 >= size and half_size - 1 < 0):
         return (list_of_integers[half_size])
@@ -24,7 +24,7 @@ def find_peak(list_of_integers):
             return (list_of_integers[half_size - 1])
 
     if (
-            list_of_integers[half_size - 1] < list_of_integers[half_size] /
+            list_of_integers[half_size - 1] < list_of_integers[half_size] \
             > list_of_integers[half_size + 1]
     ):
         return (list_of_integers[half_size])
