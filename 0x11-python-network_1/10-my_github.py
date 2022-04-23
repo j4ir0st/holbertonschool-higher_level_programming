@@ -8,7 +8,7 @@ from sys import argv
 
 
 def connectionGitHub(api, username, password):
-    """  script that takes your GitHub credentials (username and password)   """
+    """script that takes your GitHub credentials (username and password)"""
     myauthentication = requests.auth.HTTPBasicAuth(username, password)
     myrequest = requests.get(api, auth=myauthentication)
     myjson = myrequest.json()
