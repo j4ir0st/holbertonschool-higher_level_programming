@@ -4,16 +4,15 @@
    of the variable X-Request-Id in the response header
 """
 import requests
+from sys import argv
 
 
-def GETrequest(pagename):
+def getvalueheaders(pagename, key):
     """ sends a request to the URL and displays the value of the variable """
     myrequest = requests.get(pagename)
-    content = myrequest.text
-    print("Body response:")
-    print("\t- type:", type(content))
-    print("\t- content:", content)
+    myheaders = myrequest.headers
+    print(myheaders.get(key))
 
 
 if __name__ == '__main__':
-    GETrequest('https://intranet.hbtn.io/status')
+    getvalueheaders(argv[1], 'X-Request-Id')
