@@ -24,7 +24,7 @@ def find_peak(list_of_integers):
             return (list_of_integers[half_size - 1])
 
     if list_of_integers[half_size - 1] < list_of_integers[half_size] \
-    > list_of_integers[half_size + 1]:
+       > list_of_integers[half_size + 1]:
         return (list_of_integers[half_size])
 
     if (list_of_integers[half_size + 1] > list_of_integers[half_size - 1]):
