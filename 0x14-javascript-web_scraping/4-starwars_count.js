@@ -5,7 +5,7 @@ axios.get(process.argv[2])
   .then(resp => {
     let count = 0;
     const films = resp.data;
-    for (let i = 0; i < films.count; i++) {
+    for (let i = 0; i <= films.count; i++) {
       if (films.results[i].characters.includes('18')) count++;
     }
     console.log(count);
