@@ -1,6 +1,7 @@
 #!/usr/bin/node
-const fs = require('fs').promises;
+const fs = require('fs');
 
-fs.readFile(process.argv[2], { encoding: 'utf-8' })
-  .then((data) => console.log(data.toString()))
-  .catch((err) => console.error(err));
+fs.readFile(process.argv[2], 'utf-8', (err, data) => {
+  if (err) console.log(err);
+  else console.log(data);
+});
